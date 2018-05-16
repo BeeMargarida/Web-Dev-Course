@@ -15,12 +15,22 @@
 
       render() {
 
-        const colors = ['black', 'blue', 'yellow', 'grey'];
+        const fontSize = Math.floor(Math.random() * 80) + 20;
+        const colors = ['green', 'blue', 'yellow', 'teal'];
 
-        const colorN = colors[Math.floor(Math.random()*3)]; 
+        const colorN = colors[Math.floor(Math.random()*4)]; 
         return (
-          <div style={{ backgroundColor: colorN}}>
-            <h1>Random Box</h1>
+          <div style={{ 
+            fontSize: `${fontSize}px`, 
+            backgroundColor: colorN,
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '200px',
+            width: '500px'
+          }}>
+            Random Box
           </div>
 
         );
